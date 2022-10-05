@@ -3,8 +3,8 @@ package entities;
 import java.util.List;
 
 public class DeliveryCompany {
-    private final static double PRICE_PER_KILOGRAM = 20;
-    private final static double MAX_CAPACITY_PER_SQUARE_SANTIMETER = 30;
+    public final static double PRICE_PER_KILOGRAM = 20;
+    public final static double MAX_CAPACITY_PER_SQUARE_SANTIMETER = 30;
     private String deliveryCompanyName;
     private List<Customer> customers;
 
