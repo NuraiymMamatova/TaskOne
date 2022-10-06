@@ -14,6 +14,10 @@ public class DeliveryCompany {
         this.customers = customers;
     }
 
+    public DeliveryCompany(String deliveryCompanyName) {
+        this.deliveryCompanyName = deliveryCompanyName;
+    }
+
     public String getDeliveryCompanyName() {
         return deliveryCompanyName;
     }
