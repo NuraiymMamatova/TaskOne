@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DeliveryCompanyService {
-    List<DeliveryCompany>deliveryCompanies;
+    List<DeliveryCompany>deliveryCompanies = new ArrayList<>();
 
     public void acceptOrder(Order order,int company,int custom){
         if(order.getLoad().getHeight()*order.getLoad().getWidth()<DeliveryCompany.MAX_CAPACITY_PER_SQUARE_SANTIMETER) deliveryCompanies.get(company).getCustomers().get(custom).addOrders(order);
@@ -45,12 +45,5 @@ public class DeliveryCompanyService {
         }
         return d;
     }
-
-
-
-
-
-
-
 
 }
