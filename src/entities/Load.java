@@ -1,14 +1,24 @@
 package entities;
 
 public class Load {
+    private double length;
     private double height;
     private double width;
     private double weight;
 
-    public Load(double height, double width, double weight) {
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public Load(double height, double width, double weight, double length) {
         this.height = height;
         this.width = width;
         this.weight = weight;
+        this.length = length;
     }
 
     public double getHeight() {
