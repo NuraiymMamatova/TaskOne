@@ -10,6 +10,9 @@ import java.util.Scanner;
 
 public class DeliveryCompanyService {
     List<DeliveryCompany>deliveryCompanies = new ArrayList<>();
+    public DeliveryCompanyService(List<DeliveryCompany> deliveryCompanies) {
+        this.deliveryCompanies = deliveryCompanies;
+    }
 
     public void acceptOrder(Order order, String companyname, String customername) {
         if (order.getLoad().getLength() * order.getLoad().getHeight() * order.getLoad().getWidth() < DeliveryCompany.MAX_CAPACITY_PER_SQUARE_SANTIMETER) {
