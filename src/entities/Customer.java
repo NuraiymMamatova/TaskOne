@@ -1,10 +1,11 @@
 package entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Customer {
     private String customerName;
-    private List<Order> orders;
+    private List<Order> orders = new ArrayList<>();
 
     public Customer(String customerName, List<Order> orders) {
         this.customerName = customerName;
