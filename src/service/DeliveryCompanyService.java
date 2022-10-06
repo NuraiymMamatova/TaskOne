@@ -11,9 +11,18 @@ import java.util.Scanner;
 public class DeliveryCompanyService {
     List<DeliveryCompany>deliveryCompanies = new ArrayList<>();
 
-    public void acceptOrder(Order order,int company,int custom){
-        if(order.getLoad().getHeight()*order.getLoad().getWidth()<DeliveryCompany.MAX_CAPACITY_PER_SQUARE_SANTIMETER) deliveryCompanies.get(company).getCustomers().get(custom).addOrders(order);
-
+    public void acceptOrder(Order order, String companyname, String customername) {
+        if (order.getLoad().getLength() * order.getLoad().getHeight() * order.getLoad().getWidth() < DeliveryCompany.MAX_CAPACITY_PER_SQUARE_SANTIMETER) {
+            for (DeliveryCompany d : deliveryCompanies) {
+                if (d.getDeliveryCompanyName().equals(companyname)) {
+                    for (Customer c : d.getCustomers()) {
+                        if (c.getCustomerName().equals(customername)) {
+                            c.addOrders(order);
+                        }
+                    }
+                }
+            }
+        }
     }
     public void createDeliveryCompany() {
         Scanner scanner = new Scanner(System.in);
